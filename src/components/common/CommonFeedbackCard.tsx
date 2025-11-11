@@ -11,7 +11,7 @@ export default function FeedbackCard({ feedback, badge }: FeedbackCardProps) {
     <li>
       <Link
         href={`/review_detail?id=${feedback.id}`}
-        className="block rounded-2xl bg-white px-5 py-5 shadow-[0_30px_70px_-55px_rgba(15,23,42,0.25)] transition hover:scale-[1.01]"
+        className="block rounded-2xl bg-white px-5 py-5 shadow-[0_0_45px_-15px_rgba(15,23,42,0.1)] transition"
       >
         <div className="flex flex-col gap-3">
           <div className="flex items-start gap-4">
