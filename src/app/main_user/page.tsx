@@ -5,12 +5,14 @@ import FeedbackQuickActionSection from "@/components/main-user/FeedbackQuickActi
 import ProfileSection from "@/components/main-user/ProfileSection";
 import RewardSection from "@/components/main-user/RewardSection";
 import CommonNavigationBar from "@/components/common/CommonNavigationBar";
+import RecommendStoreSection from "@/components/main-user/RecommendStoreSection";
 import {
   FeedbackItem,
   ProfileData,
   RewardData,
   StatusBadgeMap,
 } from "@/components/main-user/types";
+import { StoreInfo } from "@/components/review-write/sharedConstants";
 
 const profileName = "지윤";
 
@@ -82,6 +84,30 @@ const reward: RewardData = {
   progress: 0.7,
 };
 
+const recommendedStores: StoreInfo[] = [
+  {
+    name: "카페 폴인커피",
+    category: "스페셜티 카페 · 브런치",
+    address: "서울 강남구 논현로 123길 25",
+    reviewCount: "124",
+    image: "/images/review-cafe-2.webp",
+  },
+  {
+    name: "우라쿠 스시바",
+    category: "오마카세 · 스시",
+    address: "서울 서초구 사평대로 55길 8",
+    reviewCount: "87",
+    image: "/images/review-sushi-1.webp",
+  },
+  {
+    name: "라르떼 베이커리",
+    category: "베이커리 · 디저트",
+    address: "서울 용산구 이태원로 42길 17",
+    reviewCount: "203",
+    image: "/images/review-bakery-1.webp",
+  },
+];
+
 export default function MainUserPage() {
   return (
     <div className="flex flex-1 flex-col bg-white">
@@ -101,6 +127,7 @@ export default function MainUserPage() {
         <ProfileSection profile={profile} />
         <FeedbackQuickActionSection />
         <FeedbackSection feedbacks={feedbacks} statusBadge={statusBadge} />
+        <RecommendStoreSection stores={recommendedStores} />
         {/* <RewardSection reward={reward} /> */}
       </main>
     </div>
