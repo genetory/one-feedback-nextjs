@@ -18,7 +18,6 @@
 html,
 body {
   touch-action: manipulation;
-  overscroll-behavior: none;
 }
 
 @media (prefers-color-scheme: dark) {
