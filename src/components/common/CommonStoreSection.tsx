@@ -49,9 +49,9 @@ export default function CommonStoreSection({
             </span>
           )}
           {store.rating && (
-            <span className="inline-flex items-center gap-1 text-xs text-amber-600">
+            <span className="inline-flex items-center gap-1 text-xs text-amber-600 mt-3">
+              {ratingLabel && <span className="text-slate-500">{ratingLabel}</span>}
               <span className="font-semibold">{store.rating}</span>
-              {ratingLabel && <span className="text-amber-500">{ratingLabel}</span>}
             </span>
           )}
         </div>
