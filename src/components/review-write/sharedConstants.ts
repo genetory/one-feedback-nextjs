@@ -24,7 +24,7 @@ export type StoreInfo = {
   name: string;
   category: string;
   address: string;
-  rating?: string;
+  reviewCount?: string;
   image?: string;
   highlight?: string;
   avatar?: string;

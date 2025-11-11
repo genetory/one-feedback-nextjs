@@ -9,6 +9,7 @@ type CommonStoreSectionProps = {
   highlight?: string;
   ratingLabel?: string;
   imageAlt?: string;
+  backgroundClassName?: string;
 };
 
 export default function CommonStoreSection({
@@ -16,16 +17,17 @@ export default function CommonStoreSection({
   className = "",
   imageSize = 64,
   highlight,
-  ratingLabel = "리뷰 평점",
+  ratingLabel = "리뷰",
   imageAlt,
+  backgroundClassName = "bg-white",
 }: CommonStoreSectionProps) {
   return (
     <section
-      className={`flex flex-col gap-4 rounded-3xl bg-white px-4 py-4 shadow-[0_30px_70px_-55px_rgba(15,23,42,0.35)] ${className}`}
+      className={`flex flex-col gap-4 rounded-3xl ${backgroundClassName} px-4 py-4 shadow-[0_30px_70px_-55px_rgba(15,23,42,0.35)] ${className}`}
     >
       <div className="flex items-center gap-4">
         <div
-          className="relative flex-shrink-0 overflow-hidden rounded-2xl bg-slate-100"
+          className="relative shrink-0 overflow-hidden rounded-2xl bg-slate-100"
           style={{ width: imageSize, height: imageSize }}
         >
           {store.image ? (
@@ -48,10 +50,10 @@ export default function CommonStoreSection({
               {store.address}
             </span>
           )}
-          {store.rating && (
-            <span className="inline-flex items-center gap-1 text-xs text-amber-600 mt-3">
+          {store.reviewCount && (
+            <span className="inline-flex items-center gap-1 text-xs text-black mt-3">
               {ratingLabel && <span className="text-slate-500">{ratingLabel}</span>}
-              <span className="font-semibold">{store.rating}</span>
+              <span className="font-semibold">{store.reviewCount}</span>
             </span>
           )}
         </div>

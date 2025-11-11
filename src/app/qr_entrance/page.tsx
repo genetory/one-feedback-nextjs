@@ -12,7 +12,7 @@ const qrStore: StoreInfo = {
   category: "스페셜티 카페 · 디저트",
   address: "서울 강남구 테헤란로 23길 12",
   highlight: "핸드드립과 어쿠스틱 음악이 인기예요",
-  rating: "4.8",
+  reviewCount: "48",
   image: "/images/review-cafe-1.webp",
 };
 
@@ -38,7 +38,7 @@ export default function QREntrancePage() {
           store={qrStore}
           className="shadow-[0_30px_70px_-55px_rgba(15,23,42,0.35)]"
           imageSize={80}
-          ratingLabel="리뷰 평점"
+          ratingLabel="리뷰"
           highlight={qrStore.highlight}
         />
 

@@ -16,7 +16,7 @@ const reviewStore: StoreInfo = {
   name: "카페 모노그레이",
   category: "스페셜티 카페 · 디저트",
   address: "서울 강남구 테헤란로 23길 12",
-  rating: "4.8",
+  reviewCount: "48",
   image: "/images/review-cafe-1.webp",
 };
 
@@ -70,7 +70,7 @@ export default function ReviewWritePage() {
             store={reviewStore}
             className="shadow-[0_30px_70px_-55px_rgba(15,23,42,0.35)]"
             imageSize={80}
-            ratingLabel="리뷰 평점"
+            ratingLabel="리뷰"
           />
 
 
